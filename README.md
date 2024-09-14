@@ -204,11 +204,20 @@ docker ps -a
 ## Configuration
 
 #### (Optional) Manual Ingestion of data
-> *Note:* Data is already ingested beforehand, if you want to manually ingest the data again, run the following command in a terminal with your virtual environment activated.
+> *Note:* 1. Remember to change the json file paths to the actual path the "isw_rebirth_faq_document.json" file is located.
+> *Note:* 2. Run the prep.py file only after the docker containers are up and active.
 
-- Below command will start creating the embeddings and pushing the vectors to LanceDB.
+ Run the following command in a terminal with your virtual environment activated and the location where the "prep.py" file is located.
+
+- Below command will start creating the embeddings and pushing the vectors to elasticsearch.
 ```
-python ingestion.py
+python3 prep.py
+```
+or 
+
+```
+python prep.py
+
 ```
 
 ### Pull the LLM model through Ollama(may not be necessary since it is already done from the DockerFile)
