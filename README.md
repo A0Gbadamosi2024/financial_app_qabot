@@ -136,6 +136,34 @@ pip install -r requirements.txt
 
 ## Usage
 
+
+#### 0. Create a new ".env" file inside the "app" folder and copy the following details into it. - remember to add your open-ai-key
+
+```
+# PostgreSQL Configuration
+POSTGRES_HOST=postgres
+POSTGRES_DB=course_assistant
+POSTGRES_USER=your_username
+POSTGRES_PASSWORD=your_password
+POSTGRES_PORT=5432
+ 
+# Elasticsearch Configuration
+ELASTIC_URL_LOCAL=http://localhost:9201
+ELASTIC_URL=http://elasticsearch:9200
+ELASTIC_PORT=9200
+ 
+# Ollama Configuration
+OLLAMA_PORT=11434
+ 
+# Streamlit Configuration
+STREAMLIT_PORT=8501
+ 
+# Other Configuration
+MODEL_NAME=all-mpnet-base-v2
+INDEX_NAME=course-questions
+OPENAI_API_KEY = 'something special'
+```
+
   
 
 #### 1. Start the docker-compose
