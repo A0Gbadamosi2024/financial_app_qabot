@@ -7,13 +7,10 @@
 
 # Financial App QA assitant
 
-A Retrieval-Augmented Generation (RAG) application designed to assist in ansering user queries about Quickteller. This project integrates AI-based techniques to assist in issue resolution.
+A Retrieval-Augmented Generation (RAG) application designed to assist in answering user queries about Quickteller(a financial app). This project integrates AI-based techniques to assist in issue resolution.
 
 (record a screen cast then replace this with text with a !)[cloud-asset-service-categorizer](./setup-docs/cloud-asset-service-categorizer.gif)
 
-## Deployed version of app in Cloud
-
-You can access the deployed version of the app [here](place streamlit hosted app here ).
 
 ## Features  
 
@@ -23,7 +20,7 @@ You can access the deployed version of the app [here](place streamlit hosted app
 
 - Added support to use Open Source models locally using **_Ollama_** and online using **_OpenAI_**.
 
-- Monitoring support to view dashboards.
+- Monitoring support to view dashboards via Postgres integration.
 
   
 
@@ -60,14 +57,14 @@ Funds Transfer: Send money to other accounts.
 Bill Payments: Pay for utilities, cable TV, internet subscriptions, and more.
 Purchases: Buy flight tickets, pay for events, and shop online.
 
-The platform is managed by Interswitch Nigeria Limited and is accessible via mobile apps, web browsers, and ATMs123. It’s known for its user-friendly interface and extensive network of over 8,000 billers
+The platform is managed by Interswitch Nigeria Limited and is accessible via mobile apps, web browsers, and ATMs. It’s known for its user-friendly interface and extensive network of over 8,000 billers
 
 
 ### Business Problem
 
-The company just released a new version of the app. Both new and returning users have a lot of questions. 
+The company just released a new version of the app,improving several features and radically changing the UI. Both new and returning users have a lot of questions, this has led to customer support personnel being overwhelmed. 
 
-Some of the old users are having issues logging back into their accounts while a lot of the new users have questions about the apps features. 
+In addition, some of the old users are having issues logging back into their accounts while a lot of the new users have questions about the apps features. 
 
 This application was created to answer user queries based on two faq documents.
 
@@ -234,10 +231,14 @@ docker ps -a
 
 ```
 
- - Copy the Ollama docker container id
+ - Copy the Ollama docker container id then run
+
+'''
+docker exec it <ollama_container> pull phi3
+'''
 
 
-## Configuration
+## Ingesting the base 
 
 #### (Optional) Manual Ingestion of data
 > *Note:* 1. Remember to change the json file paths to the actual path the "isw_rebirth_faq_document.json" file is located.
@@ -275,6 +276,7 @@ ollama pull phi3
 Once you're sure the setup is done. Visit the streamlit app on the exposed port specified in the docker compose file:
 
 - On your favorite browser visit http://localhost:8501.
+- - On your favorite browser visit http://localhost:3000. For the graphana app
 
 - Upon visiting the page, you should see below screen.
 
