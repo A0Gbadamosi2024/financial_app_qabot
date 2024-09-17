@@ -9,8 +9,6 @@
 
 A Retrieval-Augmented Generation (RAG) application designed to assist in answering user queries about Quickteller(a financial app). This project integrates AI-based techniques to assist in issue resolution.
 
-(record a screen cast then replace this with text with a !)[cloud-asset-service-categorizer](./setup-docs/cloud-asset-service-categorizer.gif)
-
 
 ## Features  
 
@@ -304,7 +302,6 @@ Give a new password also as `admin`
 
 - Once you successfully authenticate, you'll be taken to homescreen like this:
 
-![Grafana Home Screen](add graphana homepage here)
 
   
 
@@ -314,7 +311,6 @@ Give a new password also as `admin`
 
 >  *Note*: At first, there will be no data. As you begin using the app, all the monitoring dashboards will start to update.
 
-![Grafana Monitoring Dashboard](add graphana monitoring app here)
 
   
   
