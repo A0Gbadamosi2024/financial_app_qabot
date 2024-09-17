@@ -148,7 +148,15 @@ POSTGRES_PASSWORD=your_password
 POSTGRES_PORT=5432
  
 # Elasticsearch Configuration
-ELASTIC_URL_LOCAL=http://localhost:9201
+# PostgreSQL Configuration
+POSTGRES_HOST=postgres
+POSTGRES_DB=course_assistant
+POSTGRES_USER=your_username
+POSTGRES_PASSWORD=your_password
+POSTGRES_PORT=5432
+ 
+# Elasticsearch Configuration
+ELASTIC_URL_LOCAL=http://localhost:9200
 ELASTIC_URL=http://elasticsearch:9200
 ELASTIC_PORT=9200
  
@@ -161,7 +169,7 @@ STREAMLIT_PORT=8501
 # Other Configuration
 MODEL_NAME=all-mpnet-base-v2
 INDEX_NAME=course-questions
-OPENAI_API_KEY = 'something special'
+OPENAI_API_KEY = 'add_your_key'
 ```
 
   
